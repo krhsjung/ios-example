@@ -9,15 +9,21 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            HStack {
+                NavigationLink(destination: WebSocketView()) {
+                    Text("WebSocket Button")
+                        .foregroundColor(.white)
+                        .font(.system(size: 16, weight: .semibold))
+                        .frame(maxWidth: .infinity, minHeight: 52)
+                        .background(.black)
+                        .cornerRadius(15)
+                }
+            }.padding()
         }
-        .padding()
     }
 }
+
 
 #Preview {
     MainView()
