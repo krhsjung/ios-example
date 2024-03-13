@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		673115B92B9AA0FF005BD585 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673115B62B9AA0FF005BD585 /* WebSocketView.swift */; };
-		673115BB2B9AA279005BD585 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673115BA2B9AA279005BD585 /* WebSocketClient.swift */; };
+		673115B92B9AA0FF005BD585 /* StompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673115B62B9AA0FF005BD585 /* StompView.swift */; };
+		673115BB2B9AA279005BD585 /* StompClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673115BA2B9AA279005BD585 /* StompClient.swift */; };
 		678969982B8F0BED00719B68 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969972B8F0BED00719B68 /* ExampleApp.swift */; };
 		6789699A2B8F0BED00719B68 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969992B8F0BED00719B68 /* MainView.swift */; };
 		6789699C2B8F0BEF00719B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6789699B2B8F0BEF00719B68 /* Assets.xcassets */; };
@@ -16,15 +16,17 @@
 		678969A82B8F0CE700719B68 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969A72B8F0CE700719B68 /* Permission.swift */; };
 		678969AB2B8F0D7A00719B68 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969AA2B8F0D7A00719B68 /* OSLog.swift */; };
 		678969AD2B8F11EE00719B68 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969AC2B8F11EE00719B68 /* WebRTCClient.swift */; };
-		678969B02B8F121800719B68 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 678969AF2B8F121800719B68 /* WebRTC */; };
 		678969B32B8F129F00719B68 /* RTCStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678969B22B8F129F00719B68 /* RTCStates.swift */; };
+		67F37C762BA147C4006633E0 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F37C752BA147C4006633E0 /* WebSocketView.swift */; };
+		67F37C782BA148DA006633E0 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F37C772BA148DA006633E0 /* WebSocketClient.swift */; };
+		67F37C7A2BA1518E006633E0 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 67F37C792BA1518E006633E0 /* WebRTC */; };
 		B2B7D4BF858B9833BEA8862D /* Pods_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FDD810ACC60229DB0D8149 /* Pods_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25FDD810ACC60229DB0D8149 /* Pods_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		673115B62B9AA0FF005BD585 /* WebSocketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketView.swift; sourceTree = "<group>"; };
-		673115BA2B9AA279005BD585 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		673115B62B9AA0FF005BD585 /* StompView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StompView.swift; sourceTree = "<group>"; };
+		673115BA2B9AA279005BD585 /* StompClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StompClient.swift; sourceTree = "<group>"; };
 		678969942B8F0BED00719B68 /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678969972B8F0BED00719B68 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		678969992B8F0BED00719B68 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		678969AA2B8F0D7A00719B68 /* OSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		678969AC2B8F11EE00719B68 /* WebRTCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
 		678969B22B8F129F00719B68 /* RTCStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCStates.swift; sourceTree = "<group>"; };
+		67F37C752BA147C4006633E0 /* WebSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketView.swift; sourceTree = "<group>"; };
+		67F37C772BA148DA006633E0 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		91D3197252E1C991626E223B /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
 		FC80820A50F2F10945272012 /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.release.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,8 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678969B02B8F121800719B68 /* WebRTC in Frameworks */,
 				B2B7D4BF858B9833BEA8862D /* Pods_example.framework in Frameworks */,
+				67F37C7A2BA1518E006633E0 /* WebRTC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +66,8 @@
 		673115B72B9AA0FF005BD585 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				673115B62B9AA0FF005BD585 /* WebSocketView.swift */,
+				67F37C752BA147C4006633E0 /* WebSocketView.swift */,
+				673115B62B9AA0FF005BD585 /* StompView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -95,9 +100,9 @@
 		678969962B8F0BED00719B68 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				678969B12B8F128E00719B68 /* Extentions */,
 				673115BC2B9AA2ED005BD585 /* Model */,
 				673115B72B9AA0FF005BD585 /* Screens */,
-				678969B12B8F128E00719B68 /* Extentions */,
 				678969A92B8F0D0600719B68 /* Utils */,
 				678969972B8F0BED00719B68 /* ExampleApp.swift */,
 				678969992B8F0BED00719B68 /* MainView.swift */,
@@ -121,7 +126,8 @@
 				678969AA2B8F0D7A00719B68 /* OSLog.swift */,
 				678969A72B8F0CE700719B68 /* Permission.swift */,
 				678969AC2B8F11EE00719B68 /* WebRTCClient.swift */,
-				673115BA2B9AA279005BD585 /* WebSocketClient.swift */,
+				673115BA2B9AA279005BD585 /* StompClient.swift */,
+				67F37C772BA148DA006633E0 /* WebSocketClient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,7 +168,7 @@
 			);
 			name = example;
 			packageProductDependencies = (
-				678969AF2B8F121800719B68 /* WebRTC */,
+				67F37C792BA1518E006633E0 /* WebRTC */,
 			);
 			productName = example;
 			productReference = 678969942B8F0BED00719B68 /* example.app */;
@@ -263,13 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673115B92B9AA0FF005BD585 /* WebSocketView.swift in Sources */,
+				67F37C782BA148DA006633E0 /* WebSocketClient.swift in Sources */,
+				673115B92B9AA0FF005BD585 /* StompView.swift in Sources */,
 				6789699A2B8F0BED00719B68 /* MainView.swift in Sources */,
 				678969AD2B8F11EE00719B68 /* WebRTCClient.swift in Sources */,
+				67F37C762BA147C4006633E0 /* WebSocketView.swift in Sources */,
 				678969982B8F0BED00719B68 /* ExampleApp.swift in Sources */,
 				678969B32B8F129F00719B68 /* RTCStates.swift in Sources */,
 				678969AB2B8F0D7A00719B68 /* OSLog.swift in Sources */,
-				673115BB2B9AA279005BD585 /* WebSocketClient.swift in Sources */,
+				673115BB2B9AA279005BD585 /* StompClient.swift in Sources */,
 				678969A82B8F0CE700719B68 /* Permission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +501,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		678969AF2B8F121800719B68 /* WebRTC */ = {
+		67F37C792BA1518E006633E0 /* WebRTC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 678969AE2B8F121800719B68 /* XCRemoteSwiftPackageReference "WebRTC" */;
 			productName = WebRTC;

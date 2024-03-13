@@ -5,6 +5,7 @@ target 'example' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Starscream', '~> 4.0.6'
   pod "StompClientLib"
 
   # Pods for example

@@ -2,55 +2,63 @@
 //  WebSocketClient.swift
 //  example
 //
-//  Created by Hee Seok Jung on 3/8/24.
+//  Created by Hee Seok Jung on 3/13/24.
 //
 
 import Foundation
-import StompClientLib
+import Starscream
+
+protocol WebSocketClientDelegate {
+    func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient)
+}
 
 class WebSocketClient {
-    private var socketClient = StompClientLib()
+    private let url: String
+    private var socket: WebSocket?
+    private var isConnected: Bool = false
+    private var delegate: WebSocketClientDelegate?
     
-    func connect(url: URL) {
-        self.socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url) , delegate: self)
+    init(url: String, delegate: WebSocketClientDelegate? = nil) {
+        self.url = url
+        self.delegate = delegate
     }
     
-    func subscibe(destination: String) {
-        socketClient.subscribe(destination: destination)
+    func connect() {
+        var request = URLRequest(url: URL(string: url)!)
+        request.timeoutInterval = 5
+        socket = WebSocket(request: request)
+        socket?.delegate = self
+        socket?.connect()
     }
     
-    func sendMessage(payloadObject : [String : Any]) {
-        socketClient.sendJSONForDict(dict: payloadObject as AnyObject, toDestination: "/chatting")
+    func sendMessage(data: Data, completion: (() -> ())? = nil) {
+        socket?.write(data: data, completion: completion)
+    }
+    
+    func sendMessage(string: String, completion: (() -> ())? = nil) {
+        socket?.write(string: string, completion: completion)
+    }
+    
+    func sendMessage(ping: Data, completion: (() -> ())? = nil) {
+        socket?.write(ping: ping, completion: completion)
+    }
+    
+    func sendMessage(pong: Data, completion: (() -> ())? = nil) {
+        socket?.write(pong: pong, completion: completion)
     }
     
     func disconnect() {
-        socketClient.disconnect()
+        socket?.disconnect()
     }
-
+    
+    func disconnect(closeCode: UInt16) {
+        socket?.disconnect(closeCode: closeCode)
+    }
 }
 
-extension WebSocketClient : StompClientLibDelegate {
-    func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
-        print("[stompClient]\nheader : \(String(describing: header))\njsonBody : \(String(describing: jsonBody))\nakaStringBody : \(String(describing: stringBody))")
-    }
-    
-    func stompClientDidDisconnect(client: StompClientLib!) {
-        print("[stompClientDidDisconnect]")
-    }
-    
-    func stompClientDidConnect(client: StompClientLib!) {
-        print("[stompClientDidConnect]")
-    }
-    
-    func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {
-        print("[serverDidSendReceipt] receiptId : \(receiptId)")
-    }
-
-    func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
-        print("[serverDidSendError]\nerror message - \(description)\ndetailed message - \(String(describing: message))")
-    }
-    
-    func serverDidSendPing() {
-        print("[serverDidSendPing]")
+extension WebSocketClient : WebSocketDelegate {
+    func didReceive(event: Starscream.WebSocketEvent, client: any Starscream.WebSocketClient) {
+        Log.info("didReceive - \(event)")
+        delegate?.didReceive(event: event, client: client)
     }
 }

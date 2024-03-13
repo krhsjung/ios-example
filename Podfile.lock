@@ -1,20 +1,24 @@
 PODS:
   - SocketRocket (0.7.0)
+  - Starscream (4.0.8)
   - StompClientLib (1.4.1):
     - SocketRocket
 
 DEPENDENCIES:
+  - Starscream (~> 4.0.6)
   - StompClientLib
 
 SPEC REPOS:
   trunk:
     - SocketRocket
+    - Starscream
     - StompClientLib
 
 SPEC CHECKSUMS:
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
+  Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
   StompClientLib: ac40390e9660c574675f1c933bec81c8e2811a4f
 
-PODFILE CHECKSUM: 6d5d34f1aee515c84f326c528f31651b95eb905e
+PODFILE CHECKSUM: a57daea763a151bb460172000d2445a2ec1d49ca
 
 COCOAPODS: 1.14.3

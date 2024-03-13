@@ -8,10 +8,6 @@
 import Foundation
 import WebRTC
 
-
-import Foundation
-import WebRTC
-
 protocol WebRTCClientDelegate: AnyObject {
     func webRTCClient(_ client: WebRTCClient, didDiscoverLocalCandidate candidate: RTCIceCandidate)
     func webRTCClient(_ client: WebRTCClient, didChangeConnectionState state: RTCIceConnectionState)
