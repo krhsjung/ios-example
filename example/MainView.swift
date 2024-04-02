@@ -6,29 +6,35 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                NavigationLink(destination: URLSessionWebSocketTaskView()) {
+                    ExampleButtionLabel(text: "WebSocket Button(URLSessionWebSocketTask)")
+                }
                 NavigationLink(destination: WebSocketView()) {
-                    Text("WebSocket Button")
-                        .foregroundColor(.white)
-                        .font(.system(size: 16, weight: .semibold))
-                        .frame(maxWidth: .infinity, minHeight: 52)
-                        .background(.black)
-                        .cornerRadius(15)
+                    ExampleButtionLabel(text: "WebSocket Button(Starscream)")
                 }
                 NavigationLink(destination: StompView()) {
-                    Text("Stomp Button")
-                        .foregroundColor(.white)
-                        .font(.system(size: 16, weight: .semibold))
-                        .frame(maxWidth: .infinity, minHeight: 52)
-                        .background(.black)
-                        .cornerRadius(15)
+                    ExampleButtionLabel(text: "Stomp Button")
                 }
             }.padding()
         }
+    }
+}
+
+struct ExampleButtionLabel: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .foregroundColor(.white)
+            .font(.system(size: 16, weight: .semibold))
+            .frame(maxWidth: .infinity, minHeight: 52)
+            .background(.black)
+            .cornerRadius(15)
     }
 }
 
