@@ -21,7 +21,6 @@
 		67ACAA092BBBCFC700C943A3 /* URLSessionWebSocketTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACAA082BBBCFC700C943A3 /* URLSessionWebSocketTaskView.swift */; };
 		67F37C762BA147C4006633E0 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F37C752BA147C4006633E0 /* WebSocketView.swift */; };
 		67F37C782BA148DA006633E0 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F37C772BA148DA006633E0 /* WebSocketClient.swift */; };
-		67F37C7A2BA1518E006633E0 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 67F37C792BA1518E006633E0 /* WebRTC */; };
 		B2B7D4BF858B9833BEA8862D /* Pods_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FDD810ACC60229DB0D8149 /* Pods_example.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B7D4BF858B9833BEA8862D /* Pods_example.framework in Frameworks */,
-				67F37C7A2BA1518E006633E0 /* WebRTC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +172,6 @@
 			);
 			name = example;
 			packageProductDependencies = (
-				67F37C792BA1518E006633E0 /* WebRTC */,
 			);
 			productName = example;
 			productReference = 678969942B8F0BED00719B68 /* example.app */;
@@ -507,14 +504,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		67F37C792BA1518E006633E0 /* WebRTC */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 678969AE2B8F121800719B68 /* XCRemoteSwiftPackageReference "WebRTC" */;
-			productName = WebRTC;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6789698C2B8F0BED00719B68 /* Project object */;
 }

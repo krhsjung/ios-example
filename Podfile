@@ -7,6 +7,7 @@ target 'example' do
 
   pod 'Starscream', '~> 4.0.6'
   pod "StompClientLib"
+  pod 'WebRTC-lib'
 
   # Pods for example
 

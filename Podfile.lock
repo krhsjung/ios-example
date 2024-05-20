@@ -3,22 +3,26 @@ PODS:
   - Starscream (4.0.8)
   - StompClientLib (1.4.1):
     - SocketRocket
+  - WebRTC-lib (125.0.0)
 
 DEPENDENCIES:
   - Starscream (~> 4.0.6)
   - StompClientLib
+  - WebRTC-lib
 
 SPEC REPOS:
   trunk:
     - SocketRocket
     - Starscream
     - StompClientLib
+    - WebRTC-lib
 
 SPEC CHECKSUMS:
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
   StompClientLib: ac40390e9660c574675f1c933bec81c8e2811a4f
+  WebRTC-lib: b555c354cb70285e372d6876e6f35ab6460e51df
 
-PODFILE CHECKSUM: a57daea763a151bb460172000d2445a2ec1d49ca
+PODFILE CHECKSUM: 659bd170693adbf2099284e0e773e7a7744efa6e
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2
